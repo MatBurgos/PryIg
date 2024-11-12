@@ -52,47 +52,67 @@ public class JFormCosnultaTurnoOperacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextDni = new javax.swing.JTextField();
+        DniVet = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextMAtricula = new javax.swing.JTextField();
+        NomVet = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextMasNombere = new javax.swing.JTextField();
-        JBtnConsultar = new javax.swing.JButton();
+        ApeVet = new javax.swing.JTextField();
+        JBtnConsultarVet = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableCosnultaTurno = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
+        NomDue = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        ApeDue = new javax.swing.JTextField();
+        DniDue = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        JBtnConsultarDuenio = new javax.swing.JButton();
+        NomMasc = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        BtnBuscarMascota = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        CantGatos = new javax.swing.JTextField();
+        CantTruno = new javax.swing.JTextField();
+        CantPerros = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Dni");
 
-        jLabel2.setText("Matricula");
+        jLabel2.setText("Nombre");
 
-        jLabel3.setText("Nombre");
+        jLabel3.setText("Apellido");
 
-        jTextMasNombere.addActionListener(new java.awt.event.ActionListener() {
+        ApeVet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextMasNombereActionPerformed(evt);
+                ApeVetActionPerformed(evt);
             }
         });
 
-        JBtnConsultar.setText("Consultar");
-        JBtnConsultar.addActionListener(new java.awt.event.ActionListener() {
+        JBtnConsultarVet.setText("Consultar");
+        JBtnConsultarVet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                JBtnConsultarActionPerformed(evt);
+                JBtnConsultarVetActionPerformed(evt);
             }
         });
 
         jTableCosnultaTurno.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Fecha", "Apellido", "Nombre", "Mascota", "Veterianario"
+                "Fecha", "CodVet", "Nombre", "Apellido", "CodDue", "Nombre", "Apellido", "Mascota", "TipoMascota", "TipoTurno"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -101,66 +121,237 @@ public class JFormCosnultaTurnoOperacion extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTableCosnultaTurno);
 
+        jLabel4.setText("Nombre");
+
+        jLabel5.setText("Apellido");
+
+        ApeDue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApeDueActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Dni");
+
+        JBtnConsultarDuenio.setText("Consultar");
+        JBtnConsultarDuenio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBtnConsultarDuenioActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Nombre");
+
+        jLabel8.setText("Codigo veterinario");
+
+        jLabel9.setText("Codigo dueño");
+
+        jLabel10.setText("Mascota");
+
+        BtnBuscarMascota.setText("BUSCAR");
+        BtnBuscarMascota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnBuscarMascotaActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Cantidad turno:");
+
+        jLabel12.setText("Cantidad perros:");
+
+        jLabel13.setText("Cantidad gatos:");
+
+        CantGatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantGatosActionPerformed(evt);
+            }
+        });
+
+        CantTruno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantTrunoActionPerformed(evt);
+            }
+        });
+
+        CantPerros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CantPerrosActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI Historic", 1, 36)); // NOI18N
+        jLabel14.setText("Consulta turno operacion");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CantTruno, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CantPerros, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(CantGatos, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(15, 15, 15))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextDni, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextMAtricula, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JBtnConsultar)
-                    .addComponent(jTextMasNombere, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(16, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel14))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(DniDue, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(NomDue, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ApeDue, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(JBtnConsultarDuenio))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(DniVet, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(NomVet, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ApeVet, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35)
+                                .addComponent(JBtnConsultarVet))
+                            .addComponent(jLabel8)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(NomMasc, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(BtnBuscarMascota))
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextDni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(DniVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(jTextMAtricula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NomVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextMasNombere, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addComponent(JBtnConsultar)
+                    .addComponent(ApeVet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBtnConsultarVet))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DniDue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel4)
+                    .addComponent(NomDue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(ApeDue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBtnConsultarDuenio))
                 .addGap(18, 18, 18)
+                .addComponent(jLabel10)
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(NomMasc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(BtnBuscarMascota))
+                .addGap(30, 30, 30)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(CantTruno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13)
+                    .addComponent(CantGatos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CantPerros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(48, 48, 48))
         );
+
+        DniVet.getAccessibleContext().setAccessibleName("DniVet");
+        NomVet.getAccessibleContext().setAccessibleName("NomVet");
+        ApeVet.getAccessibleContext().setAccessibleName("ApeVet");
+        NomDue.getAccessibleContext().setAccessibleName("NombDuenio");
+        ApeDue.getAccessibleContext().setAccessibleName("ApeDuenio");
+        DniDue.getAccessibleContext().setAccessibleName("DniDuenio");
+        NomMasc.getAccessibleContext().setAccessibleName("NomMascota");
+        NomMasc.getAccessibleContext().setAccessibleDescription("");
+        CantGatos.getAccessibleContext().setAccessibleName("TxtCantidadGatos");
+        CantTruno.getAccessibleContext().setAccessibleName("TxtCantidadTurno");
+        CantPerros.getAccessibleContext().setAccessibleName("TxtCantidadPerros");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextMasNombereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextMasNombereActionPerformed
+    private void ApeVetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApeVetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextMasNombereActionPerformed
+    }//GEN-LAST:event_ApeVetActionPerformed
     
     private List<Turno>buscarTurnos(int tipoBusquedad){
         if(tipoBusquedad==0){
             return turnos=(List<Turno>)iTurno.buscarTurno(0,"", "");
         }else{
             
-           return turnos=(List<Turno>)iTurno.buscarTurno(Integer.parseInt(jTextDni.getText().toString()),jTextMAtricula.getText().toString(), jTextMasNombere.getText().toString()); 
+           return turnos=(List<Turno>)iTurno.buscarTurno(Integer.parseInt(DniVet.getText().toString()),NomVet.getText().toString(), ApeVet.getText().toString()); 
         }
     }
-    private void JBtnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnConsultarActionPerformed
+    private void JBtnConsultarVetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnConsultarVetActionPerformed
         cargarModeloTablaTurnos(buscarTurnos(1));
-    }//GEN-LAST:event_JBtnConsultarActionPerformed
+    }//GEN-LAST:event_JBtnConsultarVetActionPerformed
+
+    private void ApeDueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApeDueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApeDueActionPerformed
+
+    private void JBtnConsultarDuenioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBtnConsultarDuenioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JBtnConsultarDuenioActionPerformed
+
+    private void BtnBuscarMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarMascotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnBuscarMascotaActionPerformed
+
+    private void CantGatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantGatosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantGatosActionPerformed
+
+    private void CantTrunoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantTrunoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantTrunoActionPerformed
+
+    private void CantPerrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CantPerrosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CantPerrosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,14 +367,34 @@ public class JFormCosnultaTurnoOperacion extends javax.swing.JFrame {
     */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JBtnConsultar;
+    private javax.swing.JTextField ApeDue;
+    private javax.swing.JTextField ApeVet;
+    private javax.swing.JButton BtnBuscarMascota;
+    private javax.swing.JTextField CantGatos;
+    private javax.swing.JTextField CantPerros;
+    private javax.swing.JTextField CantTruno;
+    private javax.swing.JTextField DniDue;
+    private javax.swing.JTextField DniVet;
+    private javax.swing.JButton JBtnConsultarDuenio;
+    private javax.swing.JButton JBtnConsultarVet;
+    private javax.swing.JTextField NomDue;
+    private javax.swing.JTextField NomMasc;
+    private javax.swing.JTextField NomVet;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableCosnultaTurno;
-    private javax.swing.JTextField jTextDni;
-    private javax.swing.JTextField jTextMAtricula;
-    private javax.swing.JTextField jTextMasNombere;
     // End of variables declaration//GEN-END:variables
 }
