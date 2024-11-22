@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.veterinaria.gui.controllers.MascotasController"
+      spacing="10" padding="10">
+
+    <HBox spacing="10">
+        <Button text="Nueva Mascota" onAction="#nuevaMascota"/>
+        <Button text="Editar" onAction="#editarMascota"/>
+        <Button text="Eliminar" onAction="#eliminarMascota"/>
+        <TextField fx:id="txtBuscar" promptText="Buscar..."/>
+        <Button text="Buscar" onAction="#buscarMascota"/>
+    </HBox>
+
+    <TableView fx:id="tablaMascotas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colCodigo" text="Código"/>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colTipo" text="Tipo"/>
+            <TableColumn fx:id="colDuenio" text="Dueño"/>
+        </columns>
+    </TableView>
+</VBox>

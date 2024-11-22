@@ -1,0 +1,31 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.veterinaria.gui.controllers.MainController"
+            prefHeight="600.0" prefWidth="800.0">
+    
+    <top>
+        <MenuBar>
+            <Menu text="Archivo">
+                <MenuItem text="Salir" onAction="#salir"/>
+            </Menu>
+            <Menu text="Gestión">
+                <MenuItem text="Mascotas" onAction="#mostrarMascotas"/>
+                <MenuItem text="Dueños" onAction="#mostrarDuenios"/>
+                <MenuItem text="Veterinarios" onAction="#mostrarVeterinarios"/>
+                <MenuItem text="Turnos" onAction="#mostrarTurnos"/>
+            </Menu>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane fx:id="tabPane">
+            <!-- Las pestañas se agregarán dinámicamente -->
+        </TabPane>
+    </center>
+</BorderPane>
